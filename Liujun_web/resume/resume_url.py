@@ -1,14 +1,13 @@
 from django.conf.urls import include, url
 from django.contrib import admin
-from index import views as iv
-from resume import resume_url
+from . import views as rv
 
 urlpatterns = [
     # Examples:
     # url(r'^$', 'Liujun_web.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^index/', iv.do_index),
-    url(r'resume/', include(resume_url))
+    url(r'^/', include(admin.site.urls)),
+    url(r'^phone/', rv.do_phone),
+    url(r'^year/', rv.do_year),
 ]
